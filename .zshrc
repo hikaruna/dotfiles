@@ -1,5 +1,3 @@
-source ~/.zsh.d/zsh-notify/notify.plugin.zsh
-
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^l' forward-word
