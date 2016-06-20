@@ -8,3 +8,5 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 
 export EDITOR='vi'
+
+alias owata='terminal-notifier -sound default -message owata'
