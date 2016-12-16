@@ -9,3 +9,5 @@ bindkey "$terminfo[cuu1]" history-substring-search-up
 eval "$(rbenv init - zsh)"
 
 eval "$(direnv hook zsh)"
+
+source ~/.zsh.d/auto_notify.sh
