@@ -14,3 +14,6 @@ alias owata='terminal-notifier -sound default -message owata'
 
 
 export AUTO_NOTIFY_TIME=3 # 時間の閾値
+export ANDROID_HOME='/usr/local/opt/android-sdk'
+
+fpath=($fpath /usr/local/share/zsh/site-functions) #carthage補完
