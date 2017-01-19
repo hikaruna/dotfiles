@@ -4,8 +4,14 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 export SYS_NOTIFIER="/usr/local/bin/terminal-notifier"
 export NOTIFY_COMMAND_COMPLETE_TIMEOUT=5
 
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
 
-export EDITOR='vi'
+if [ -d $HOME/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  # tmux対応
+  for D in `\ls $HOME/.anyenv/envs` ; do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
+fi
+
 alias vi='vim'
