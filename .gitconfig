@@ -10,9 +10,9 @@
   br    = branch
   ps    = push
   logg  = log -p --graph --word-diff --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d'
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  lg    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  pushf = push --force-with-lease
   branch-clear = ! git branch --merged | grep -v -e master -e devel -e '*' | xargs git branch -d
-  pushf  = push --force-with-lease
 
 [user]
 	name = hikaruna
