@@ -14,9 +14,6 @@
   pushf = push --force-with-lease
   branch-clear = ! git branch --merged | grep -v -e master -e devel -e '*' | xargs git branch -d
 
-[user]
-	name = hikaruna
-	email = me@hikaruna.net
 [gui]
 	encoding = utf-8
 [core]
@@ -51,3 +48,5 @@
     ref = https://{host}/{path}/pull/{short_ref}
     rev = https://{host}/{path}/commit/{commit}
     file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
+[include]
+	path = .gitconfig.local
