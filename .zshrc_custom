@@ -2,8 +2,9 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^l' forward-word
 bindkey '^h' backward-word
-#bindkey "^r" history-substring-search-up
 zmodload zsh/terminfo
 bindkey "$terminfo[cuu1]" history-substring-search-up
 
 eval "$(direnv hook zsh)"
+
+source ~/.zsh.d/auto_notify.sh

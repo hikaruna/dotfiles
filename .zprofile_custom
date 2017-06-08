@@ -15,3 +15,14 @@ if [ -d $HOME/.anyenv ] ; then
 fi
 
 alias vi='vim'
+export PATH=$HOME/bin:$PATH
+
+export EDITOR='vi'
+
+alias owata='terminal-notifier -sound default -message owata'
+
+
+export AUTO_NOTIFY_TIME=3 # 時間の閾値
+export ANDROID_HOME=/usr/local/share/android-sdk
+
+fpath=($fpath /usr/local/share/zsh/site-functions) #carthage補完

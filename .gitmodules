@@ -1,3 +1,12 @@
 [submodule ".vim"]
 	path = .vim
 	url = git@github.com:hikaruna/vim.git
+[submodule ".zprezto"]
+	path = .zprezto
+	url = git@github.com:sorin-ionescu/prezto.git
+[submodule ".anyenv"]
+	path = .anyenv
+	url = git@github.com:riywo/anyenv.git
+[submodule "secret"]
+	path = secret
+	url = ~/Dropbox/Home/secret
