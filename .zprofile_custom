@@ -21,6 +21,11 @@ export EDITOR='vi'
 
 alias owata='terminal-notifier -sound default -message owata'
 
+# ```override default .profile
+export LESS='-F -g -i -M -R -w -X -z-4'
+export VISUAL='vi'
+# ```
+
 
 export AUTO_NOTIFY_TIME=3 # 時間の閾値
 export ANDROID_HOME=/usr/local/share/android-sdk
