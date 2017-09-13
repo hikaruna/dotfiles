@@ -54,3 +54,5 @@
 
 [include]
 	path = .gitconfig.local
+[init]
+	templatedir = ~/.git_template
