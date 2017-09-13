@@ -51,8 +51,5 @@
     file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
 [fetch]
 	prune = true
-
-[include]
-	path = .gitconfig.local
 [init]
 	templatedir = ~/.git_template

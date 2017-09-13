@@ -5,15 +5,15 @@ if [ -z $(git config user.name) -o -z $(git config user.email) ] ; then
 	echo 'git config user.name or git config user.email is not setted.'
 
 	if [ -z $(git config user.name) ] ; then
-		git config --local user.name "$GIT_USER" \
+		git config --local user.name "$GIT_USER_NAME" \
 			&& \
-		echo "git config --local user.name ${GIT_USER}"
+		echo "git config --local user.name ${GIT_USER_NAME}"
 	fi
 
 	if [ -z $(git config user.email) ] ; then
-		git config --local user.email "$GIT_EMAIL" \
+		git config --local user.email "$GIT_USER_EMAIL" \
 			&& \
-		echo "git config --local user.email ${GIT_EMAIL}"
+		echo "git config --local user.email ${GIT_USER_EMAIL}"
 	fi
 
 	echo 'Please re-commit'
