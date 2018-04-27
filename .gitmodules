@@ -7,6 +7,3 @@
 [submodule ".anyenv"]
 	path = .anyenv
 	url = git@github.com:riywo/anyenv.git
-[submodule "secret"]
-	path = secret
-	url = ~/Dropbox/Home/secret
