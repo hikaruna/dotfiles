@@ -1,11 +1,11 @@
 [alias]
-  df  = diff --color
+  df  = diff
   graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
   gr    = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
   st    = status
   ci    = commit
   stt   = status -uno
-  dff = diff --word-diff --color
+  dff = diff --word-diff
   co    = checkout
   br    = branch
   ps    = push
@@ -16,6 +16,8 @@
   branch-clear = ! git branch --merged | grep -v -e master -e devel -e '*' | xargs git branch -d
   config-user = "! git config --local user.name \"$GIT_USER_NAME\" ; git config --local user.email \"$GIT_USER_EMAIL\""
 
+[color]
+	ui = auto
 [gui]
 	encoding = utf-8
 [core]
@@ -52,6 +54,3 @@
     file = "https://{host}/{path}/blob/{short_rev}/{file}{line && \"#L%d\" % line}"
 [fetch]
 	prune = true
-[user]
-	name = 
-	email = 
