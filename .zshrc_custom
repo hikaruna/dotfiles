@@ -3,12 +3,70 @@ bindkey '^e' end-of-line
 bindkey '^l' forward-word
 bindkey '^h' backward-word
 zmodload zsh/terminfo
-bindkey "$terminfo[cuu1]" history-substring-search-up
+#bindkey "$terminfo[cuu1]" history-substring-search-up
 
 eval "$(direnv hook zsh)"
 
 source ~/.zsh.d/auto_notify.sh
 
+# 大文字小文字区別することなく保管
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # for carthage completion
 autoload -U compinit
 compinit -u
+
+# 単語の一部として扱われる文字のセットを指定する
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+
+if [ -d $HOME/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  # tmux対応
+  for D in `\ls $HOME/.anyenv/envs` ; do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
+fi
+
+alias vi='vim'
+export PATH=$HOME/bin:$PATH
+export EDITOR='vi'
+
+# ```override default .profile
+export LESS='-F -g -i -M -R -w -X -z-4'
+export VISUAL='vi'
+# ```
+
+alias ls="ls -GF"
+alias ll="ls -l"
+alias la="ls -la"
+
+alias owata='terminal-notifier -sound default -message owata'
+# 時間がかかる処理の通知系設定 .zsh.d/auto-notify.sh
+export AUTO_NOTIFY_TIME=3 # 時間の閾値
+
+export ANDROID_HOME=/usr/local/share/android-sdk
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export PATH="${ANDROID_HOME}/tools:$PATH"
+export PATH="${ANDROID_HOME}/tools/bin:$PATH"
+export PATH="${ANDROID_HOME}/platform-tools:$PATH"
+
+fpath=($fpath /usr/local/share/zsh/site-functions) #carthage補完
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+if [ -d "${HOME}/flutter/bin" ] ; then
+	export PATH="${HOME}/flutter/bin:${PATH}"
+fi
+
+export HISTFILE=~/.zsh_history
+# メモリに保存される履歴の件数。(保存数だけ履歴を検索できる)
+export HISTSIZE=1000
+# HISTFILE で指定したファイルに保存される履歴の件数。
+export SAVEHIST=10000
+# 前回と同じコマンドは履歴に追加されなくなる。
+setopt hist_ignore_dups
+# ヒストリにhistoryコマンドを記録しない
+setopt hist_no_store
+# 余分なスペースを削除してヒストリに記録する
+setopt hist_reduce_blanks
