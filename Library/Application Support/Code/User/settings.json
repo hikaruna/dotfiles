@@ -1,0 +1,11 @@
+// 既定の設定を上書きするには、このファイル内に設定を挿入します
+{
+  "editor.renderWhitespace": "boundary",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
+  "vim.useSystemClipboard": true,
+  "editor.tabSize": 2,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+}

@@ -1,0 +1,42 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+{
+    "key": "cmd+space",
+    "command": "editor.action.triggerSuggest"
+},
+{
+    "key": "shift+cmd+[BracketLeft]",
+    "command": "workbench.action.terminal.toggleTerminal"
+},
+{
+    "key": "ctrl+shift+[BracketLeft]",
+    "command": "-workbench.action.terminal.toggleTerminal"
+},
+{
+    "key": "shift+cmd+o",
+    "command": "workbench.action.quickOpen"
+},
+{
+    "key": "cmd+p",
+    "command": "-workbench.action.quickOpen"
+},
+{
+    "key": "shift+cmd+o",
+    "command": "-workbench.action.gotoSymbol"
+},
+{
+    "key": "shift+cmd+v",
+    "command": "-markdown.showPreview",
+    "when": "editorLangId == 'markdown'"
+},
+{
+    "key": "shift+cmd+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "editorLangId == 'markdown'"
+},
+{
+    "key": "cmd+k v",
+    "command": "-markdown.showPreviewToSide",
+    "when": "editorLangId == 'markdown'"
+}
+]
