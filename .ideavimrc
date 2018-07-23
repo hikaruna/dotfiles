@@ -1,1 +1,2 @@
+" Intellij IDEA 14 に ideavim 入れて使うときのクリップボード共有設定
 set clipboard=unnamed

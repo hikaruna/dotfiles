@@ -21,7 +21,7 @@
 [gui]
 	encoding = utf-8
 [core]
-	editor = /usr/local/bin/vim
+	editor = vi
 	excludesfile = /Users/hikaru/.gitignore_global
 	quotepath = false
 [difftool "sourcetree"]

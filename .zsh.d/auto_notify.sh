@@ -23,7 +23,7 @@ function precmd_function() {
 	time=`expr $END_TIME - $BEGIN_TIME`
 	if [ ${AUTO_NOTIFY_TIME:-3} -lt $time ];then
 		if [ "${AUTO_NOTIFY_COMMAND:-UNDEF}" = "UNDEF" ];then
-			terminal-notifier -sound default -message "$precmd" -group owata > /dev/null
+			terminal-notifier  -title "${precmd}" -message "${time} sec." -sound default -group owata > /dev/null
 		fi
 	fi
 }

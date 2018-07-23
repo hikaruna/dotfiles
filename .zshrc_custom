@@ -2,6 +2,10 @@ bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^l' forward-word
 bindkey '^h' backward-word
+
+# デフォのはずだがvscodeのterminal上ではなぜか変なのに変更されるので上書き設定している
+bindkey "^R" history-incremental-search-backward
+
 zmodload zsh/terminfo
 #bindkey "$terminfo[cuu1]" history-substring-search-up
 
@@ -28,9 +32,14 @@ if [ -d $HOME/.anyenv ] ; then
   done
 fi
 
-alias vi='vim'
 export PATH=$HOME/bin:$PATH
+
+alias vi='vim'
+which nvim > /dev/null && alias vim='nvim' #neovim
 export EDITOR='vi'
+if [ $TERM_PROGRAM = vscode ]; then
+  alias vi='code'
+fi
 
 # ```override default .profile
 export LESS='-F -g -i -M -R -w -X -z-4'
@@ -70,8 +79,3 @@ setopt hist_ignore_dups
 setopt hist_no_store
 # 余分なスペースを削除してヒストリに記録する
 setopt hist_reduce_blanks
-
-if [ "${TERM_PROGRAM}" = "vscode" ]
-then
-	alias vi='code'
-fi
