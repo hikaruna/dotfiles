@@ -8,4 +8,12 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
+  "terminal.integrated.rendererType": "dom",
+  "editor.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "monospace",
+  "git.ignoreMissingGitWarning": true,
+  "window.zoomLevel": 0,
+  "files.trimTrailingWhitespace": true,
+  "workbench.editor.enablePreview": false,
+  "files.insertFinalNewline": true,
 }
