@@ -13,7 +13,7 @@
     "command": "-workbench.action.terminal.toggleTerminal"
 },
 {
-    "key": "shift+cmd+o",
+    "key": "cmd+o",
     "command": "workbench.action.quickOpen"
 },
 {
@@ -38,5 +38,13 @@
     "key": "cmd+k v",
     "command": "-markdown.showPreviewToSide",
     "when": "editorLangId == 'markdown'"
+},
+{
+    "key": "shift+cmd+o",
+    "command": "workbench.action.files.openFileFolder"
+},
+{
+    "key": "cmd+o",
+    "command": "-workbench.action.files.openFileFolder"
 }
 ]
