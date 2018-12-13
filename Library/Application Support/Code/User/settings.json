@@ -2,10 +2,10 @@
 {
   "editor.renderWhitespace": "boundary",
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 2000,
   "vim.useSystemClipboard": true,
   "editor.tabSize": 2,
   "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true,
     "suppressShowKeyBindingsNotice": true
   },
   "terminal.integrated.rendererType": "dom",
@@ -16,4 +16,6 @@
   "files.trimTrailingWhitespace": true,
   "workbench.editor.enablePreview": false,
   "files.insertFinalNewline": true,
+  "npm.enableScriptExplorer": true,
+  "files.autoSaveDelay": 1800,
 }

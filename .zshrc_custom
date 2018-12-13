@@ -16,9 +16,8 @@ source ~/.zsh.d/auto_notify.sh
 # 大文字小文字区別することなく保管
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# for carthage completion
-autoload -U compinit
-compinit -u
+# brew zsh-completion の有効化
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # 単語の一部として扱われる文字のセットを指定する
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
