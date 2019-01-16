@@ -22,6 +22,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # 単語の一部として扱われる文字のセットを指定する
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
+# anyenv系でsystemが指定されているときのため優先順位を落としてhomebrew製のPATHを設定
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
 if [ -d $HOME/.anyenv ] ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
